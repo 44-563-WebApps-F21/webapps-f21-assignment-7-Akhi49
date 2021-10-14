@@ -38,7 +38,7 @@
   	<p> Press the button to create an new element of type div and then add it to the container.</p>
 	<button onclick="makeNewDiv()">Push value</button>
 	<button type="button" class="btn btn-primary" onclick="popItem()">Pop</button>
-	<button type="button" class="btn btn-primary" onclick="Zap()">Zap Values=</button>
+	<button type="button" class="btn btn-primary" onclick="Zap()">Zap Values</button>
 	<button type="button" class="btn btn-primary" onclick="uniqueValues()">Unique</button>
 	
 </body>
@@ -64,13 +64,7 @@
 		let stackItems = document.getElementsByClassName('stack');
 		let inputData = document.getElementById("name").value;
 		let stacksSize = stackItems.length;
-
-			if(stacksSize == 0){
-			 	alert("No Items in the stack");
-				return;
-			} 
-		
-			for (let index = 0; index < stacksSize; index++) {
+					for (let index = 0; index < stacksSize; index++) {
 				let element = stackItems[index].innerHTML;
 				if (element == inputData) {
 					console.log(stackItems[index])
@@ -80,7 +74,7 @@
 
 			}
 	}
-
+	//Bonus
 	function uniqueValues(){
 
 let stackItems = document.getElementsByClassName('stack');
