@@ -29,7 +29,28 @@
       console.log("Current Time is : " + myTime);
 
     }
-   
+    function startTime() {
+            myTime = undefined;
+            buttonTime = Date.now();
+            let CountDown = Math.round(Math.random() * (10 - 2) + 2);
+
+            for(let i=0;i<CountDown;i++){
+              setTimeout(() => {
+                  document.getElementById("countdown").innerHTML = i;
+                }, (CountDown-i)*1000);
+            }
+
+              setTimeout(() => {
+                if(myTime == undefined){
+                  document.getElementById("target").innerHTML = "Too Slow";
+                }
+                
+                else{
+                  let elapsedTime = (-1) * (buttonTime - myTime);
+                  document.getElementById("target").innerHTML = "Time was "+elapsedTime+" ms";
+                }
+              }, (CountDown)*1000)
+            }
   </script>
 
 
